@@ -20,3 +20,71 @@ For each record in the dataset it is provided:
 - Its activity label.
 - An identifier of the subject who carried out the experiment.
 
+# Number of Data points per Subject.
+![](https://github.com/VinayPrasad1394/Human-Activity-Recognition---Machine-Learnind-MLP-and-LSTM/blob/master/Images/Data_points_per_Subject.png)
+
+
+# Number of Data points per Activity.
+![](https://github.com/VinayPrasad1394/Human-Activity-Recognition---Machine-Learnind-MLP-and-LSTM/blob/master/Images/Points_per_activity.png)
+# TSNE Plot:
+
+Here, Features: 561 are converted into 2 (Dimensionality Reduction).
+
+![](https://github.com/VinayPrasad1394/Human-Activity-Recognition---Machine-Learnind-MLP-and-LSTM/blob/master/Images/TSNE.png)
+
+# Model Build:
+**Model Peformance:**
+*   Logistic Regression: Train_F1_score = 0.99, Test_F1_score = 0.96
+*   SVC                : Train_F1_score = 0.98, Test_F1_score = 0.95
+*   SVC_Grid           : Train_F1_score = 0.99, Test_F1_score = 0.96
+
+All the Machine Learning models have nearby scores on Train and Test
+
+![](https://github.com/VinayPrasad1394/Human-Activity-Recognition---Machine-Learnind-MLP-and-LSTM/blob/master/Images/Test_Train_Learning_Curve.png)
+
+# MLP_Sigmoid:
+**Accuracy of 0.87 on Train and 0.85 on Test**
+* Features  : 561
+* Rows      : 7352
+* Classes   : 6
+* Layers    : 2- Hidden Layes([512,256], Dropout = 0.5,Activation = sigmoid), Kernel Regulizer = l2 and Batch Normalized
+* Output    : Activation = Softmax
+* Epochs    : 20
+* Batch Size: 128
+![](https://github.com/VinayPrasad1394/Human-Activity-Recognition---Machine-Learnind-MLP-and-LSTM/blob/master/Images/MLP_Sigmoid.png)
+# LSTM_Softmax(Output):
+**Accuracy of 0.95 on Train and 0.92 on Test**
+**Accuracy of 0.87 on Train and 0.85 on Test**
+* Features/Input  : 9
+* Rows            : 7352
+* Classes         : 6
+* Layers          : 2-  Hidden Layes([64,32,16], Dropout = abs(np.random.normal(0,1)), Activation = sigmoid) and Batch Normalized,
+* Output          : Activation = Softmax
+* Epochs          : 30
+Batch Size      : 128
+![](https://github.com/VinayPrasad1394/Human-Activity-Recognition---Machine-Learnind-MLP-and-LSTM/blob/master/Images/LSTM_Softmax.png)
+# LSTM_Sigmoid(Output):
+Here, I have divided the activities into two: 
+*     Dynamic: Walking, Walking_Upstairs, Walking_Downstairs, Marked class = 1.
+*     Static : Sitting, Sleeping, Standing, Marked class = 0.
+Ultimately, I have converted 6 class classification to 2 class classification and Model has performed pretty well.
+**Accuracy of 0. on Train and 0.85 on Test**
+* Features/Input  : 9
+* Rows            : 7352
+* Classes         : 2
+* Layers          : 2-  Hidden Layes([64,32,16], Dropout = abs(np.random.normal(0,1)), Activation = sigmoid) and Batch Normalized,
+* Output          : Activation = Sigmoid
+* Epochs          : 10
+* Batch Size      : 128
+![](https://github.com/VinayPrasad1394/Human-Activity-Recognition---Machine-Learnind-MLP-and-LSTM/blob/master/Images/LSTM_2_Class.png)
+
+**Model Performance**
+* Logistic Regression : Train_F1_score = 0.99, Test_F1_score = 0.96
+* SVC                 : Train_F1_score = 0.98, Test_F1_score = 0.95
+* SVC_Grid            : Train_F1_score = 0.99, Test_F1_score = 0.96
+* MLP_Sigmoid         : Train_Accuracy = 0.87, Test_Accuracy = 0.85
+* LSTM_SoftMax        : Train_Accuracy = 0.95, Test_Accuracy = 0.92 (6 Class)
+* LSTM_Sigmoid        : Train_Accuracy = 0.98, Test_Accuracy = 0.99 (2 Class)
+
+
+*Thanks UCI Machine Learning Repository for collecting the data,we were able to build a model and predict the outcome based on the data.*
