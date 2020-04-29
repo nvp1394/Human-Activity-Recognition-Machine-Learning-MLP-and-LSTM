@@ -74,7 +74,7 @@ We can also build Machine Learning Algorithms and check performance.
 
 ![](https://github.com/VinayPrasad1394/Human-Activity-Recognition-Machine-Learnind-MLP-and-LSTM/blob/master/Images/TSNE_2_Class.png)
 
-**Accuracy of 0. on Train and 0.85 on Test**
+**Accuracy of 0.98 on Train and 0.99 on Test**
 * Features/Input  : 9
 * Rows            : 7352
 * Classes         : 2
