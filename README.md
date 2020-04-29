@@ -52,7 +52,7 @@ All the Machine Learning models have nearby scores on Train and Test
 * Epochs    : 20
 * Batch Size: 128
 ![](https://github.com/VinayPrasad1394/Human-Activity-Recognition---Machine-Learnind-MLP-and-LSTM/blob/master/Images/MLP_Sigmoid.png)
-# LSTM_Softmax(Output):
+# LSTM_Softmax(Output) - 6 Class Classification::
 **Accuracy of 0.95 on Train and 0.92 on Test**
 **Accuracy of 0.87 on Train and 0.85 on Test**
 * Features/Input  : 9
@@ -63,11 +63,17 @@ All the Machine Learning models have nearby scores on Train and Test
 * Epochs          : 30
 Batch Size      : 128
 ![](https://github.com/VinayPrasad1394/Human-Activity-Recognition---Machine-Learnind-MLP-and-LSTM/blob/master/Images/LSTM_Softmax.png)
-# LSTM_Sigmoid(Output):
+# LSTM_Sigmoid(Output) - 2 Class Classification:
 Here, I have divided the activities into two: 
 *     Dynamic: Walking, Walking_Upstairs, Walking_Downstairs, Marked class = 1.
 *     Static : Sitting, Sleeping, Standing, Marked class = 0.
-Ultimately, I have converted 6 class classification to 2 class classification and Model has performed pretty well.
+Ultimately, I have converted 6 class classification to 2 class classification and Model has performed pretty well.*
+# Visualization on 2-Class classification:
+If you check the TSNE plot, The data can be easily seperatable linearly.
+We can also build Machine Learning Algorithms and check performance.
+
+![](https://github.com/VinayPrasad1394/Human-Activity-Recognition-Machine-Learnind-MLP-and-LSTM/blob/master/Images/TSNE_2_Class.png)
+
 **Accuracy of 0. on Train and 0.85 on Test**
 * Features/Input  : 9
 * Rows            : 7352
