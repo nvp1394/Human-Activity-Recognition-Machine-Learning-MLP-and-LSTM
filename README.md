@@ -58,7 +58,7 @@ All the Machine Learning models have nearby scores on Train and Test
 * Features/Input  : 9
 * Rows            : 7352
 * Classes         : 6
-* Layers          : 2-  Hidden Layes([64,32,16], Dropout = abs(np.random.normal(0,1)), Activation = sigmoid) and Batch Normalized,
+* Layers          : 3 -  Hidden Layes([64,32,16], Dropout = abs(np.random.normal(0,1)), Activation = sigmoid) and Batch Normalized,
 * Output          : Activation = Softmax
 * Epochs          : 30
 Batch Size      : 128
@@ -72,7 +72,7 @@ Ultimately, I have converted 6 class classification to 2 class classification an
 * Features/Input  : 9
 * Rows            : 7352
 * Classes         : 2
-* Layers          : 2-  Hidden Layes([64,32,16], Dropout = abs(np.random.normal(0,1)), Activation = sigmoid) and Batch Normalized,
+* Layers          : 3 - Hidden Layes([64,32,16], Dropout = abs(np.random.normal(0,1)), Activation = sigmoid) and Batch Normalized,
 * Output          : Activation = Sigmoid
 * Epochs          : 10
 * Batch Size      : 128
